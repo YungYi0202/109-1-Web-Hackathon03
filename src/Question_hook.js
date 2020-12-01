@@ -39,6 +39,7 @@ function Question() {
       ans[ current_question+1 ]= ans[ current_question]
       setAns([...ans]);
 
+
       setCurrentQuestion(current_question+1);
     }
   }
@@ -84,7 +85,7 @@ function Question() {
 
           {complete?
             <div id="question-title">
-            Your Score: {score}
+            Your Score: {score} / {contents.length}
             </div>
             :<div id="question-title">
               {contents[current_question].question}
