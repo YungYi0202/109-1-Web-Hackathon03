@@ -23,7 +23,7 @@ function Question() {
     const {
       data: { message, score }
     } = await instance.post('/checkAns', { params: { ans } })
-    console.log("getScore:" + message);
+    console.log("getScore: " + message);
     setScore(Number(score));
   }
 
@@ -96,7 +96,7 @@ function Question() {
             :<div id="options">
               {contents[current_question].options.map((ele, i)=>(
                 <div className="each-option" key={i} onChange={(e) => choose(i)}>
-                  <input type="radio" name="options" id={getOptionId(contents[current_question].questionID, i)} />
+                  <input type="radio" name="options" id={getOptionId(contents[current_question].questionID, i) } />
                   <span> {ele} </span>
                 </div>
               ))}
